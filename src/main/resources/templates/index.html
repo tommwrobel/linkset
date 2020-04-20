@@ -13,27 +13,51 @@ xmlns:th="http://www.thymeleaf.org">
 </head>
 <body>
 
-    <nav class="navbar navbar-dark bg-primary-custom">
-            <a class="navbar-brand" href="#">
-                <img src="../static/img/linkset-logo.svg" th:src="@{img/linkset-logo.svg}" width="148" height="43" alt="linkset-logo" >
+    <header>
+        <nav class="navbar sticky-top navbar-dark bg-primary navbar-expand-sm">
+            <a href="#" class="navbar-brand">
+                <img src="../static/img/linkset-logo.svg" th:src="@{img/linkset-logo.svg}" alt="Linkset"/>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Hamburger menu button">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                  <a class="nav-item nav-link" href="#">Features</a>
-                  <a class="nav-item nav-link" href="#">Pricing</a>
-                </div>
-              </div>
-    </nav>
-<section class="header">
-    <div class="hero">
-        <h1>Share links better way!</h1>
-        <a href="#" class="btn btn-primary">Create linkset!</a>
-    </div>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-anchor">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-anchor">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
+            <div class="col-md-12 p-lg-5 mx-auto my-5">
+              <h1 class="display-4 font-weight-normal">Share links better</h1>
+              <p class="lead font-weight-normal">Share links with co-workers simple and effective way.</p>
+              <a class="btn btn-lg btn-primary" href="/create_linkset">Create Linkset</a>
+            </div>
+          </div>
+    </header>
+
+   <section id="about" class="text-center p-5">
+        <a id="about-anchor"></a>
+       <h2>About project</h2>
+       <p class="lead">Some basic informations about project</p>
+       <p></p>
+   </section>
+
+   <section id="contact" class="text-center p-5 bg-light">
+    <a id="contact-anchor"></a>
+    <h2>Contact</h2>
+    <p class="lead">Do you have any questions? Contact me!</p>
+    <p></p>
 </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">Copyright 2020 by linkset.herokuapp.com</span>
+          </div>
+
+    </footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
