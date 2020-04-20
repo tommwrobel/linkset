@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,18 +8,32 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="../static/css/custom.css" th:href="@{css/custom.css}" rel="stylesheet"/>
+    <title>Linkset - easy link sharing</title>
 </head>
 <body>
 
-    <nav class="navbar .navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <img src="img/linkset-logo.svg" width="148" height="43" alt="linkset-logo">
-        </a>
-      </nav>
-
-<h1>Hello, world!</h1>
+    <nav class="navbar navbar-dark bg-primary-custom">
+            <a class="navbar-brand" href="#">
+                <img src="../static/img/linkset-logo.svg" th:src="@{img/linkset-logo.svg}" width="148" height="43" alt="linkset-logo" >
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link" href="#">Features</a>
+                  <a class="nav-item nav-link" href="#">Pricing</a>
+                </div>
+              </div>
+    </nav>
+<section class="header">
+    <div class="hero">
+        <h1>Share links better way!</h1>
+        <a href="#" class="btn btn-primary">Create linkset!</a>
+    </div>
+</section>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
