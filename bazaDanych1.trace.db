@@ -1,0 +1,4 @@
+2020-04-21 09:08:02 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT*FROM 'LINK'[*]"; oczekiwano "identifier"
+Syntax error in SQL statement "SELECT*FROM 'LINK'[*]"; expected "identifier"; SQL statement:
+SELECT*FROM 'LINK' [42001-200]
