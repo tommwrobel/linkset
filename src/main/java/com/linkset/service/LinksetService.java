@@ -20,7 +20,7 @@ public class LinksetService {
     private LinkRepository linkRepository;
     private List<Link> links;
 
-    public List<Linkset> getLinksets(@PathVariable("linksetId") Long number) {
+    public List<Linkset> getLinksets() {
         return (List<Linkset>) linksetRepository.findAll();
     }
 

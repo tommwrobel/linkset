@@ -36,6 +36,14 @@ public class LinksetController {
         }
     }
 
+    @GetMapping("linkset/all")
+    public String allLinksets(Model model) {
+        List<Linkset> linksets = linksetService.getLinksets();
+        linksets.stream().forEach(System.out::println);
+        model.addAttribute("linksets", linksets);
+        return "linkset-all";
+    }
+
     @GetMapping("/linkset/new")
     public String newLinkset() {
         return "linkset-new";
@@ -51,8 +59,7 @@ public class LinksetController {
         Linkset newLinkset = new Linkset(linksetName);
         linksetService.addLinkset(newLinkset);
 
-        for(int i = 0; i < linkNames.size(); i++)
-        {
+        for (int i = 0; i < linkNames.size(); i++) {
             Link newLink = new Link(newLinkset.getId(), linkNames.get(i), linkHrefs.get(i), linkDescriptions.get(i));
             linkService.addLink(newLink);
         }
