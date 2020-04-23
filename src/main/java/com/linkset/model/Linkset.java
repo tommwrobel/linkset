@@ -10,7 +10,6 @@ public class Linkset {
     @Id
     @GeneratedValue
     private Long id;
-
     private String name;
 
     public Linkset() {

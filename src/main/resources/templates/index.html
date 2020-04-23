@@ -15,25 +15,28 @@ xmlns:th="http://www.thymeleaf.org">
 
     <header>
         <nav class="navbar sticky-top navbar-dark bg-primary navbar-expand-sm">
-            <a href="#" class="navbar-brand">
-                <img src="../static/img/linkset-logo.svg" th:src="@{img/linkset-logo.svg}" alt="Linkset"/>
+            <div class="container fixed-width">
+            <a href="index.html" th:href="@{~/}" class="navbar-brand">
+                <img src="../static/img/linkset-logo.svg" th:src="@{~/img/linkset-logo.svg}" alt="Linkset"/>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Hamburger menu button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainmenu">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about-anchor">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact-anchor">Contact</a></li>
+                    <li class="nav-item p-2"><a class="nav-link" href="index.html" th:href="@{~/}">Home</a></li>
+                    <li class="nav-item p-2"><a class="nav-link" href="index.html#about-anchor" th:href="@{~/#about-anchor}">About</a></li>
+                    <li class="nav-item p-2"><a class="nav-link" href="index.html#contact-anchor" th:href="@{~/#contact-anchor}">Contact</a></li>
                 </ul>
+            </div>
             </div>
         </nav>
         <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
             <div class="col-md-12 p-lg-5 mx-auto my-5">
               <h1 class="display-4 font-weight-normal">Share links better</h1>
-              <p class="lead font-weight-normal">Share links with co-workers simple and effective way.</p>
-              <a class="btn btn-lg btn-primary" href="/new_linkset">Create Linkset</a>
+              <p class="lead font-weight-normal mb-4">Share links with co-workers simple and effective way.</p>
+              <a class="btn btn-lg btn-primary m-1" href="linkset/new">Create Linkset</a>
+              <!--<a class="btn btn-lg btn-outline-primary m-1" href="linkset/new">Register</a>-->
             </div>
           </div>
     </header>
@@ -54,7 +57,7 @@ xmlns:th="http://www.thymeleaf.org">
 
     <footer class="footer text-center">
         <div class="container">
-            <span class="text-muted">Copyright 2020 by linkset.herokuapp.com</span>
+            <span class="text-muted">Copyright &copy; 2020 by linkset.herokuapp.com</span>
           </div>
 
     </footer>

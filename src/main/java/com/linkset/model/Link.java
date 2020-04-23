@@ -10,7 +10,6 @@ public class Link {
     @Id
     @GeneratedValue
     private Long id;
-
     private Long linksetId;
     private String name;
     private String href;
