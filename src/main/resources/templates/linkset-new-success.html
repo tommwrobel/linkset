@@ -38,36 +38,8 @@
 </header>
 
 <section id="form" class="text-center p-5">
-    <h2>Add new linkset</h2>
-    <div class="container fixed-width">
-        <form action="/addLinkset" method="post">
-            <div class="form-group align-self-center">
-                <label for="linksetName">Linkset name:</label>
-                <input type="text" class="form-control" id="linksetName" name="linksetName" aria-describedby="emailHelp"
-                       placeholder="Enter Linkset name">
-
-                <div class="input_fields_wrap link_form">
-                    <div class="form-row mt-4">
-                        <div class="col col-md-3">
-                            <input type="text" class="form-control" placeholder="Link name">
-                        </div>
-                        <div class="col col-md-3">
-                            <input type="text" class="form-control" placeholder="Link href">
-                        </div>
-                        <div class="col col-md-5">
-                            <input type="text" class="form-control" placeholder="Description">
-                        </div>
-                        <div class="col col-md-1 button-column">
-                            <a class="add_field_button btn btn-success text-white"><i class="fa fa-plus-circle"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-    </div>
-    <button type="submit" class="btn btn-primary">Add new linkset</button>
-    </form>
+    <div class="alert alert-primary" role="alert">
+        Linkset added! <a th:href="'/linkset/' + ${linksetId}">Go to you linkset</a>!
     </div>
 </section>
 

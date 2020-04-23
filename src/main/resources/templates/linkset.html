@@ -51,7 +51,7 @@
             <tr th:each="link : ${links}">
                 <th th:text="${link.getId()}"></th>
                 <td th:text="${link.getDescription()}"></td>
-                <td><a th:href="${link.getHref()}" th:text="${link.getName()}"></a></td>
+                <td><a th:href="${link.getHref()}" th:text="${link.getHref()}"></a></td>
             </tr>
             </tbody>
         </table>

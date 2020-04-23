@@ -17,4 +17,8 @@ public class LinkService {
     public List<Link> getLinks(Long linksetId) {
         return linkRepository.findByLinksetId(linksetId);
     }
+
+    public void addLink(Link link) {
+        linkRepository.save(link);
+    }
 }

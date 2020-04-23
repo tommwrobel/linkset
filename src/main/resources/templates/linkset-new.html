@@ -40,7 +40,7 @@
 <section id="form" class="text-center p-5">
     <h2>Add new linkset</h2>
     <div class="container fixed-width">
-        <form action="/addLinkset" method="post">
+        <form action="/linkset/new" method="post">
             <div class="form-group align-self-center">
                 <label for="linksetName">Linkset name:</label>
                 <input type="text" class="form-control" id="linksetName" name="linksetName" aria-describedby="emailHelp"
@@ -49,13 +49,13 @@
                 <div class="input_fields_wrap link_form">
                     <div class="form-row mt-4">
                         <div class="col col-md-3">
-                            <input type="text" class="form-control" placeholder="Link name">
+                            <input type="text" class="form-control" placeholder="Link name" name="linkName">
                         </div>
                         <div class="col col-md-3">
-                            <input type="text" class="form-control" placeholder="Link href">
+                            <input type="text" class="form-control" placeholder="Link href" name="linkHref">
                         </div>
                         <div class="col col-md-5">
-                            <input type="text" class="form-control" placeholder="Description">
+                            <input type="text" class="form-control" placeholder="Description" name="linkDescription">
                         </div>
                         <div class="col col-md-1 button-column">
                             <a class="add_field_button btn btn-success text-white"><i class="fa fa-plus-circle"></i></a>
@@ -90,35 +90,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-        $(document).ready(function() {
-	var max_fields      = 10; //maximum input boxes allowed
-	var wrapper   		= $(".input_fields_wrap"); //Fields wrapper
-	var add_button      = $(".add_field_button"); //Add button ID
-	var elementToAppend = $(".input_fields_wrap > div:first-child");
-
-	var x = 1; //initlal text box count
-	$(wrapper).on("click",".add_field_button", function(e){ //on add input button click
-		e.preventDefault();
-		if(x < max_fields){ //max input box allowed
-			x++; //text box increment
-            
-            $(wrapper).append($(elementToAppend).wrap("<p>").parent().html()); //add input box
-            $(elementToAppend).unwrap();
-
-            $(".input_fields_wrap > .form-row .button-column a").remove();
-            $(".input_fields_wrap > .form-row:not(:last-child) .button-column").append('<a class="remove_field_button btn btn-danger text-white"><i class="fa fa-minus-circle"></i></a>');
-            $(".input_fields_wrap > .form-row:last-child .button-column").append('<a class="add_field_button btn btn-success text-white"><i class="fa fa-plus-circle"></i></a>');
-        }
-	});
-
-	$(wrapper).on("click",".remove_field_button", function(e){ //user click on remove text
-		e.preventDefault(); $(this).parent('div').parent('div').remove(); x--;
-	})
-});
-
-
-
-</script>
+<script type="text/javascript" src="../static/js/form.js" th:src="@{~/js/form.js}"></script>
 </body>
 </html>
